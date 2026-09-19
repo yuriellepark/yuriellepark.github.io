@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yurielle Jua Park — A Quiet Pencil</title>
+<meta name="description" content="Portfolio of Yurielle Jua Park — poet and author of A Quiet Pencil, flutist, and math team member at The Lovett School, Atlanta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='25' font-size='24'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<!-- Scroll reveals hide content until revealed, so they are opted into here.
+     Without this line nothing is ever hidden and the page reads fine with no JS. -->
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark"><div class="pencil"></div><p>A Quiet Pencil</p></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<header class="site-head">
+  <a class="brand" href="#top">Yurielle <em>Jua</em> Park</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menu">
+    <span id="navLabel">Index</span>
+    <span class="bars" aria-hidden="true"><i></i><i></i></span>
+  </button>
+</header>
+
+<nav class="menu" id="menu">
+  <ol>
+    <li><a href="#quiet-pencil"><span>01</span> A Quiet Pencil</a></li>
+    <li><a href="#math"><span>02</span> Math Team</a></li>
+    <li><a href="#band"><span>03</span> Band &amp; Flute</a></li>
+    <li><a href="#service"><span>04</span> Service</a></li>
+    <li><a href="#essay"><span>05</span> Environment</a></li>
+    <li><a href="#awards"><span>06</span> Awards</a></li>
+    <li><a href="#beyond"><span>07</span> Off the Page</a></li>
+    <li><a href="reader.html"><span>↗</span> Read the book</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-kicker">The Lovett School · Atlanta, Georgia</p>
+        <h1 class="split" data-split>Yurielle Park<span class="l2" data-split-line>writes quietly.</span></h1>
+        <p class="hero-sub" data-reveal data-delay="3">
+          Eighth grader, flutist, and author of <b>A Quiet Pencil</b> — a hundred-day poetry
+          project of illustrated poems about noticing small things: a watermelon emergency,
+          a mind that wanders off, an atlas of one's own thoughts.
+        </p>
+        <div class="hero-tags" data-reveal data-delay="4">
+          <span class="tag">Poetry</span>
+          <span class="tag">Flute</span>
+          <span class="tag">Mathematics</span>
+          <span class="tag">Environment</span>
+          <span class="tag">Tennis</span>
+        </div>
+      </div>
+
+      <div class="hero-book" data-reveal="right" data-delay="2">
+        <figure data-tilt>
+          <img src="assets/book/pages/p00.jpg" alt="Cover of A Quiet Pencil — a watercolour lake under a gold crescent moon with a blue jay on a branch." width="928" height="1200">
+        </figure>
+        <figcaption>A Quiet Pencil · Poems · 2026</figcaption>
+      </div>
+    </div>
+    <p class="scroll-cue">Scroll</p>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" id="marquee" aria-hidden="true"></div>
+
+  <!-- ================= 01 · A QUIET PENCIL ================= -->
+  <section class="sec qp" id="quiet-pencil">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>01 / Writing</p>
+        <h2 class="sec-title split" data-split data-reveal>A Quiet <em>Pencil</em></h2>
+        <p class="sec-meta" data-reveal data-delay="2">
+          100-day poetry project<br>63 illustrated poems<br>Forthcoming · Amazon KDP &amp; Apple Books
+        </p>
+      </div>
+
+      <div class="qp-inner">
+        <div class="qp-copy">
+          <h3 data-reveal>One page a day, for a hundred days.</h3>
+          <p class="lede" data-reveal data-delay="1">
+            Every day Yurielle answered one small prompt with a poem — <strong>what I would save
+            first</strong>, <strong>a rule I wish people would follow</strong>, <strong>if my
+            thoughts had a map</strong>. Each poem was then set as a full illustrated page, so
+            the book reads the way the writing feels: quiet, unhurried, closely observed.
+          </p>
+          <p class="lede" data-reveal data-delay="2">
+            The finished collection is being published as a paperback and e-book under her own
+            name. The whole book can be read here, page by page.
+          </p>
+
+          <div class="stats" data-reveal="wipe" data-delay="2">
+            <div class="stat"><b>100</b><span>Days</span></div>
+            <div class="stat"><b>63</b><span>Poems</span></div>
+            <div class="stat"><b>65</b><span>Pages</span></div>
+          </div>
+
+          <a class="btn" href="reader.html" data-reveal data-delay="3" data-magnetic>
+            Open the book <span class="arw" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="book3d" data-reveal="right" data-delay="2" aria-hidden="true">
+          <div class="vol">
+            <div class="leaf b"><img src="assets/book/pages/p13.jpg" alt=""></div>
+            <div class="leaf"><img src="assets/book/pages/p05.jpg" alt=""></div>
+            <div class="cover"><img src="assets/book/pages/p00.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- three poems in full -->
+    <div class="wrap" style="margin-top:clamp(56px,9vh,110px)">
+      <div class="grid-3">
+        <article class="poem-card" data-reveal data-delay="1">
+          <p class="pt">Atlas of My Mind</p>
+          <pre>If my thoughts had a map
+There would be crowded roads of thoughts
+With dead ends and never ending loops
+And in the middle a volcano,
+The factory producing endless thoughts and dreams
+And somewhere on the side an ocean
+Where my dreams float peacefully
+Near islands with question marks
+With every little thing I don't know.</pre>
+        </article>
+        <article class="poem-card" data-reveal data-delay="2">
+          <p class="pt">Infinite Me</p>
+          <pre>A thought I almost said out loud
+But that sat at the tip of my tongue
+Refusing to be spoken
+Was my wish for a clone machine.
+If anything like that ever existed
+I would make infinite clones of me
+And work more wisely
+With so much more time
+To do even more —
+But I wake up from this daydream
+Where there's only one of me.</pre>
+        </article>
+        <article class="poem-card" data-reveal data-delay="3">
+          <p class="pt">Everything Blue</p>
+          <pre>From the many colors of the rainbow
+Red orange yellow green blue and purple
+My favorite of all is the color of
+The clear sky
+And a blueberry pie
+The peaceful ocean
+And a jar full of blue potion
+And also
+A bowl of juicy blueberries
+And twinkling blue fairies…</pre>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 · MATH TEAM ================= -->
+  <section class="sec" id="math">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>02 / Mathematics</p>
+        <h2 class="sec-title split" data-split data-reveal>Math <em>Team</em></h2>
+        <p class="sec-meta" data-reveal data-delay="2">The Lovett School<br>Aug 2024 – May 2026<br>1 hr/week · 26 weeks/yr</p>
+      </div>
+
+      <div class="split-2">
+        <div>
+          <p class="lede" data-reveal>
+            Two years on the school math team — meeting weekly to work through competition
+            problems together, then sitting the contests as a team.
+          </p>
+          <p class="lede" data-reveal data-delay="1">
+            It is the same attention the poems ask for, pointed somewhere else: read the problem
+            slowly, notice the one detail everybody skipped, and be willing to sit with not
+            knowing for a while.
+          </p>
+        </div>
+        <blockquote data-reveal="right" data-delay="2" style="margin:0">
+          <p class="pull">Math has rules I trust.</p>
+          <p class="pull-attr">A Quiet Pencil · Day 13</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 · BAND ================= -->
+  <section class="sec" id="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>03 / Music</p>
+        <h2 class="sec-title split" data-split data-reveal>Band &amp; <em>Flute</em></h2>
+        <p class="sec-meta" data-reveal data-delay="2">Flutist · 2022 – Present<br>5 hrs/week · 52 weeks/yr</p>
+      </div>
+
+      <p class="lede" data-reveal style="margin-bottom:clamp(34px,5vh,60px)">
+        Four years of flute, most of it in an ensemble. Auditioned into district and state
+        honor bands two years running, and was nominated to play in the Atlanta Youth Wind
+        Symphony Young Artists Concert.
+      </p>
+
+      <div class="vid" data-reveal="wipe" data-vid style="--ar:1/1;max-width:600px;margin-inline:auto">
+        <video preload="none" playsinline controls width="720" height="720"
+               poster="assets/video/allstate-band.jpg"
+               src="assets/video/allstate-band.mp4"></video>
+        <div class="poster" style="background-image:url('assets/video/allstate-band.jpg')">
+          <span class="play" aria-hidden="true"></span>
+          <span class="visually-hidden"></span>
+        </div>
+      </div>
+      <p class="cap" data-reveal>All-State Band · 7th grade · flute, 10th chair</p>
+
+      <ul class="ledger" data-reveal style="margin-top:clamp(40px,6vh,70px)">
+        <li><div class="row"><span class="k">01</span><span class="t">All-State Band <small>Flute, 10th chair</small></span><span class="d">7th grade</span></div></li>
+        <li><div class="row"><span class="k">02</span><span class="t">GMEA District Honor Band <small>Flute, 7th chair</small></span><span class="d">7th grade</span></div></li>
+        <li><div class="row"><span class="k">03</span><span class="t">GMEA District Honor Band <small>Flute, 14th chair</small></span><span class="d">6th grade</span></div></li>
+        <li><div class="row"><span class="k">04</span><span class="t">Atlanta Youth Wind Symphony <small>Young Artists Concert — nominated &amp; performed</small></span><span class="d">6th – 8th grade</span></div></li>
+      </ul>
+
+      <div class="grid-2" style="margin-top:clamp(34px,5vh,60px)">
+        <figure style="margin:0" data-reveal data-delay="1">
+          <div class="media wide"><img loading="lazy" src="assets/photos/allstate-band.jpg" alt="Yurielle playing flute in the All-State Band during a concert." data-par></div>
+          <figcaption>In the flute section, All-State Band</figcaption>
+        </figure>
+        <figure style="margin:0" data-reveal data-delay="2">
+          <div class="media wide"><img loading="lazy" src="assets/photos/allstate-award.jpg" alt="All-State Band certificate." data-par></div>
+          <figcaption>All-State Band certificate</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 · SERVICE ================= -->
+  <section class="sec" id="service">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>04 / Service</p>
+        <h2 class="sec-title split" data-split data-reveal>Joyful Sound <em>Youth Ensemble</em></h2>
+        <p class="sec-meta" data-reveal data-delay="2">Korean Community Presbyterian<br>Church of Atlanta<br>Mar 2025 – Present</p>
+      </div>
+
+      <div class="split-2" style="margin-bottom:clamp(34px,5vh,60px)">
+        <p class="lede" data-reveal>
+          A youth ensemble that rehearses weekly and takes its music out to people who cannot
+          easily come to a concert hall — most often to <strong>Mesun Senior Home</strong>, where
+          the residents are the whole audience.
+        </p>
+        <p class="lede" data-reveal data-delay="1">
+          Playing flute in a room of twelve people is a different instrument than playing it in
+          an auditorium. You can hear exactly who you are playing for.
+        </p>
+      </div>
+
+      <figure style="margin:0" data-reveal="wipe">
+        <div class="media wide"><img loading="lazy" src="assets/photos/mesun-senior-home.jpg" alt="The Joyful Sound Youth Ensemble performing for residents at Mesun Senior Home." data-par></div>
+        <figcaption>Performing for residents at Mesun Senior Home</figcaption>
+      </figure>
+
+      <div class="vid" data-reveal="wipe" data-vid style="--ar:16/9;margin-top:clamp(20px,3vh,36px)">
+        <video preload="none" playsinline controls width="1280" height="720"
+               poster="assets/video/jsye-kcpc.jpg"
+               src="assets/video/jsye-kcpc.mp4"></video>
+        <div class="poster" style="background-image:url('assets/video/jsye-kcpc.jpg')">
+          <span class="play" aria-hidden="true"></span>
+        </div>
+      </div>
+      <p class="cap" data-reveal>Joyful Sound Youth Ensemble in performance</p>
+    </div>
+  </section>
+
+  <!-- ================= 05 · ESSAY ================= -->
+  <section class="sec" id="essay">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>05 / Writing</p>
+        <h2 class="sec-title split" data-split data-reveal>Environmental <em>Essay</em></h2>
+        <p class="sec-meta" data-reveal data-delay="2">HOBY Youth Leadership Korea<br>&amp; EASE<br>August 2026</p>
+      </div>
+
+      <div class="split-2">
+        <div>
+          <p class="lede" data-reveal>
+            An essay submitted to the <strong>10th Global Youth Environmental Essay
+            Competition</strong>, run by HOBY Youth Leadership Korea with the Education
+            Association for Software Empowerment.
+          </p>
+          <p class="lede" data-reveal data-delay="1">
+            Environmental science is the subject she reads about when nobody has assigned it —
+            specifically, the ordinary things a person can actually change.
+          </p>
+        </div>
+        <blockquote data-reveal="right" data-delay="2" style="margin:0">
+          <p class="pull">Recycling bins… which are all the color blue.</p>
+          <p class="pull-attr">A Quiet Pencil · Day 5</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 · AWARDS ================= -->
+  <section class="sec" id="awards">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>06 / Recognition</p>
+        <h2 class="sec-title split" data-split data-reveal>Awards &amp; <em>Honors</em></h2>
+        <p class="sec-meta" data-reveal data-delay="2">The Lovett School<br>2024 – 2026</p>
+      </div>
+
+      <ul class="ledger" data-reveal>
+        <li><div class="row"><span class="k">01</span><span class="t">Lovett Fine Arts Award <small>All-State Band &amp; District Band — 7th grade</small></span><span class="d">May 2026</span></div></li>
+        <li><div class="row"><span class="k">02</span><span class="t">Lovett Fine Arts Award <small>District Band — 6th grade</small></span><span class="d">May 2025</span></div></li>
+        <li><div class="row"><span class="k">03</span><span class="t">Citizenship Award <small>7th grade</small></span><span class="d">May 2026</span></div></li>
+        <li><div class="row"><span class="k">04</span><span class="t">Principal's List <small>7th grade, second semester</small></span><span class="d">May 2026</span></div></li>
+        <li><div class="row"><span class="k">05</span><span class="t">Principal's List <small>7th grade, first semester</small></span><span class="d">Dec 2025</span></div></li>
+        <li><div class="row"><span class="k">06</span><span class="t">Principal's List <small>6th grade, second semester</small></span><span class="d">May 2025</span></div></li>
+        <li><div class="row"><span class="k">07</span><span class="t">Principal's List <small>6th grade, first semester</small></span><span class="d">Dec 2024</span></div></li>
+      </ul>
+
+      <div class="grid-3" style="margin-top:clamp(34px,5vh,60px)">
+        <figure style="margin:0" data-reveal data-delay="1">
+          <div class="media tall"><img loading="lazy" src="assets/photos/ayws-concert.jpg" alt="Lovett Fine Arts awards for the band programme." data-par></div>
+          <figcaption>Lovett Fine Arts Award</figcaption>
+        </figure>
+        <figure style="margin:0" data-reveal data-delay="2">
+          <div class="media tall"><img loading="lazy" src="assets/photos/gmea-honor-band.jpg" alt="GMEA District Honor Band certificate." data-par></div>
+          <figcaption>GMEA District Honor Band</figcaption>
+        </figure>
+        <figure style="margin:0" data-reveal data-delay="3">
+          <div class="media tall"><img loading="lazy" src="assets/photos/citizenship-award.jpg" alt="Citizenship Award certificate." data-par></div>
+          <figcaption>Citizenship Award</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 · BEYOND ================= -->
+  <section class="sec" id="beyond">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-num" data-reveal>07 / Elsewhere</p>
+        <h2 class="sec-title split" data-split data-reveal>Off the <em>Page</em></h2>
+      </div>
+
+      <div class="chips">
+        <div class="chip" data-reveal data-delay="1"><i>Sport</i><b>Tennis</b><span>Lovett School Girls Tennis Team — drills, matches, and a season of showing up in the Georgia heat.</span></div>
+        <div class="chip" data-reveal data-delay="2"><i>Reading</i><b>Fantasy</b><span>The genre she reads for herself. It shows up everywhere in the poems: fairies, potions, doors that don't quite open.</span></div>
+        <div class="chip" data-reveal data-delay="3"><i>Practice</i><b>Flute</b><span>Five hours a week, fifty-two weeks a year, since 2022 — the one thing that never stops.</span></div>
+      </div>
+
+      <figure style="margin:clamp(34px,5vh,60px) 0 0" data-reveal="wipe">
+        <div class="media wide"><img loading="lazy" src="assets/photos/tennis-team.jpg" alt="The Lovett School girls tennis team on the courts." data-par></div>
+        <figcaption>Lovett School Girls Tennis Team</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="foot-big split" data-split data-reveal>Still writing.</p>
+    <a class="btn" href="reader.html" data-magnetic>Read A Quiet Pencil <span class="arw" aria-hidden="true">→</span></a>
+    <div class="foot-row" style="margin-top:clamp(40px,6vh,70px)">
+      <p>Yurielle Jua Park · The Lovett School · Atlanta, GA</p>
+      <p><a href="mailto:yuriellepark121012@gmail.com">yuriellepark121012@gmail.com</a></p>
+      <p>© 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/book-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
