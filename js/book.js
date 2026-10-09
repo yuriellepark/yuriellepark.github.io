@@ -70,7 +70,7 @@
 
   function buildSingle() {
     book.innerHTML = '<div class="book-shadow" aria-hidden="true"></div>' +
-                     '<div class="leaf" id="solo" style="left:0;width:100%">' +
+                     '<div class="leaf top" id="solo" style="left:0;width:100%">' +
                        '<div class="face front"><img id="soloImg" alt=""></div>' +
                      '</div>';
     leaves = [];
@@ -112,6 +112,9 @@
         var on = k < flips;
         if (instant) leaf.style.transition = 'none';
         leaf.classList.toggle('flipped', on);
+        // Only the two leaves actually on top carry the page shadow — see
+        // the note on .reader .leaf.top in style.css.
+        leaf.classList.toggle('top', k === flips - 1 || k === flips);
         leaf.style.zIndex = on ? (k + 1) : (LEAVES - k);
         if (instant) { void leaf.offsetWidth; leaf.style.transition = ''; }
       });
@@ -177,7 +180,7 @@
     var fwd = to > page;
     busy = true;
     var ov = document.createElement('div');
-    ov.className = 'leaf';
+    ov.className = 'leaf top';
     ov.style.cssText = 'left:0;width:100%;z-index:50;transition:transform .72s cubic-bezier(.65,.05,.36,1)';
     ov.innerHTML = '<div class="face front"><img src="' + src(fwd ? page : to) + '" alt=""></div>' +
                    '<div class="face back"><img src="' + src(fwd ? to : page) + '" alt=""></div>';

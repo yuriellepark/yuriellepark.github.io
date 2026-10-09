@@ -1,0 +1,5 @@
+# Source media kept locally — the web-ready copies live in assets/photos and
+# assets/video. These originals are far too large to publish.
+assets/new-photos/
+
+.DS_Store

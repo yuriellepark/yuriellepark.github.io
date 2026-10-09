@@ -692,6 +692,15 @@ section {
   );
   border-radius: 3px 0 0 3px;
 }
+/* The hero frame is shared with the portrait: same float and tilt, but a
+   photograph has no spine and no cover radius, so those are switched off. */
+.hero-portrait figure::before {
+  display: none;
+}
+.hero-portrait img {
+  border-radius: 4px;
+}
+
 .hero-book figcaption {
   margin-top: 20px;
   font-family: var(--mono);
@@ -1306,12 +1315,15 @@ body.reader {
   min-height: 0;
   perspective: 2600px;
 }
-.book {
+/* Everything below belongs to the reader's flipbook and is scoped to
+   .reader on purpose: the hero book in section 01 also uses .leaf, and an
+   unscoped `.leaf { width: 50% }` was halving its pages. */
+.reader .book {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.7s var(--ease);
 }
-.leaf {
+.reader .leaf {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1321,39 +1333,44 @@ body.reader {
   transform-style: preserve-3d;
   transition: transform 1s var(--ease-io);
 }
-.leaf.flipped {
+.reader .leaf.flipped {
   transform: rotateY(-180deg);
 }
-.leaf .face {
+.reader .leaf .face {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
   overflow: hidden;
   background: var(--paper);
+}
+/* Only the leaf on top of each half casts a shadow. All 33 leaves sit in
+   one stack, so letting each cast its own piled them into a solid black
+   halo around the book. book.js marks the top leaves. */
+.reader .leaf.top .face {
   box-shadow: 0 14px 44px rgba(0, 0, 0, 0.5);
 }
-.leaf .face img {
+.reader .leaf .face img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.leaf .front {
+.reader .leaf .front {
   transform: rotateY(0deg);
   border-radius: 0 4px 4px 0;
 }
-.leaf .back {
+.reader .leaf .back {
   transform: rotateY(180deg);
   border-radius: 4px 0 0 4px;
 }
 /* gutter shading */
-.leaf .front::after {
+.reader .leaf .front::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0) 12%);
 }
-.leaf .back::after {
+.reader .leaf .back::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1364,12 +1381,12 @@ body.reader {
     rgba(0, 0, 0, 0) 12%
   );
 }
-.leaf .empty {
+.reader .leaf .empty {
   background: #0b0a22;
   box-shadow: none;
 }
 
-.book-shadow {
+.reader .book-shadow {
   position: absolute;
   left: 50%;
   bottom: -24px;
